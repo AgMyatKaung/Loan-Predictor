@@ -7,7 +7,7 @@ from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score
 import joblib
 
-data = pd.read_csv("D:\Programming\AI\loan\Loan1.csv")
+data = pd.read_csv("Loan1.csv")
 X = data[['Annual Salary', 'Bank Balance']]
 y = data['Employed']
 
@@ -34,7 +34,7 @@ for name, model in models.items():
         best_accuracy = accuracy
         best_model = model
 
-joblib.dump(best_model, "D:\Programming\AI\loan\loan_trainModel.pkl")
+joblib.dump(best_model, "loan_trainModel.pkl")
 
 def predict_loan_eligibility(salary, balance):
     features = scaler.transform([[salary, balance]])
