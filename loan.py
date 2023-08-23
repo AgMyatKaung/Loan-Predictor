@@ -8,7 +8,7 @@ from sklearn.metrics import accuracy_score
 import joblib
 
 # Load and preprocess data
-data = pd.read_csv("loan1.csv")
+data = pd.read_csv("Loan1.csv")
 X = data[['Annual Salary', 'Bank Balance']]
 y = data['Employed']
 
